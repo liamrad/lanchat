@@ -14,6 +14,6 @@
     "socket.io": "^4.5.1"
   },
   "bin": {
-    "lan-chat": "./index.js"
+    "lan-chat": "node ./index.js"
   }
 }
