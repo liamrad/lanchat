@@ -2,6 +2,7 @@
   "name": "chat-in-lan",
   "version": "1.0.0",
   "description": "have a chat in lan use Socket.IO",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

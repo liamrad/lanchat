@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const express = require('express')
-const http = require('http')
-const { resolve } = require('path')
-const { Server } = require('socket.io')
+import express from 'express'
+import http from 'node:http'
+import { resolve, dirname } from 'node:path'
+import { Server } from 'socket.io'
 
 
 const app = express()
@@ -11,7 +11,7 @@ const io = new Server(server)
 
 app.get('/', (req, res) => {
   // res.send('<h1>Hi</h1>')
-  res.sendFile(resolve(__dirname, './index.html'))
+  res.sendFile(resolve(dirname('./'), './index.html'))
 })
 
 io.on('connection', (socket) => {
