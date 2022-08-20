@@ -2,16 +2,17 @@
 import express from 'express'
 import http from 'node:http'
 import { resolve, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { Server } from 'socket.io'
 
 
 const app = express()
 const server = http.createServer(app)
 const io = new Server(server)
+const getLocalPath = target => resolve(fileURLToPath(import.meta.url), target)
 
 app.get('/', (req, res) => {
-  // res.send('<h1>Hi</h1>')
-  res.sendFile(resolve(dirname('./'), './index.html'))
+  res.sendFile(getLocalPath('../index.html'))
 })
 
 io.on('connection', (socket) => {
