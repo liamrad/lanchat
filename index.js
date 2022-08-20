@@ -28,4 +28,12 @@ io.on('connection', (socket) => {
   // socket.broadcast.emit('hi')
 })
 
-server.listen(3000, () => { console.log('server is running on 3000' )})
+let port = 3000
+server.listen(port, () => { console.log(`server is running on ${port}` )})
+
+server.on('error', e => {
+  if (e.code === 'EADDRINUSE') {
+    port += 1
+    server.listen(port)
+  }
+})
