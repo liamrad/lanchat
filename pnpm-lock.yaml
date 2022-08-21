@@ -2,10 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   express: ^4.18.1
+  rrpf: ^0.0.4
   socket.io: ^4.5.1
 
 dependencies:
   express: 4.18.1
+  rrpf: 0.0.4
   socket.io: 4.5.1
 
 packages:
@@ -406,6 +408,10 @@ packages:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
+    dev: false
+
+  /rrpf/0.0.4:
+    resolution: {integrity: sha512-9No6rhFgfvGIucsZAdNdrH01om4MuWJqD4ydLeeX232O2/dYZ8yqMHkAs1IjMerWk2FMEyiWLS1rCHsYE7m3cQ==}
     dev: false
 
   /safe-buffer/5.2.1:

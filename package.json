@@ -1,21 +1,34 @@
 {
-  "name": "chat-in-lan",
-  "version": "0.1.0",
-  "description": "have a chat in lan use Socket.IO",
+  "name": "@liamrad/lanchat",
   "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@7.9.0",
+  "description": "have a chat in lan use Socket.IO",
+  "author": "Liam Shi <liamrad@163.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/liamrad",
+  "homepage": "https://github.com/liamrad/lanchat#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamrad/lanchat.git"
+  },
+  "bugs": "https://github.com/liamrad/lanchat/issues",
+  "keywords": [],
+  "sideEffects": false,
   "main": "index.js",
+  "files": [
+    "index.html",
+    "index.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "express": "^4.18.1",
-    "rrpf": "^0.0.1",
+    "rrpf": "^0.0.4",
     "socket.io": "^4.5.1"
   },
   "bin": {
-    "lan-chat": "./index.js"
+    "lanchat": "./index.js"
   }
 }

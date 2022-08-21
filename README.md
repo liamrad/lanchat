@@ -3,5 +3,5 @@
 ## Usage
 
 ```bash
-npx git://github.com/liamrad/chat-in-lan lan-chat
+npx git://github.com/liamrad/lanchat lanchat
 ```
