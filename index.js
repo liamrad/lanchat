@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 import express from 'express'
 import http from 'node:http'
-import { resolve, dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { Server } from 'socket.io'
-
+import rrpf from 'rrpf'
 
 const app = express()
 const server = http.createServer(app)
 const io = new Server(server)
-const getLocalPath = target => resolve(fileURLToPath(import.meta.url), target)
 
 app.get('/', (req, res) => {
-  res.sendFile(getLocalPath('../index.html'))
+  res.sendFile(rrpf('./index.html'))
 })
 
 io.on('connection', (socket) => {
