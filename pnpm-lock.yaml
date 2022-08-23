@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   express: ^4.18.1
+  ip: ^1.1.8
   rrpf: ^0.0.4
   socket.io: ^4.5.1
 
 dependencies:
   express: 4.18.1
+  ip: 1.1.8
   rrpf: 0.0.4
   socket.io: 4.5.1
 
@@ -299,6 +301,10 @@ packages:
 
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+    dev: false
+
+  /ip/1.1.8:
+    resolution: {integrity: sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==}
     dev: false
 
   /ipaddr.js/1.9.1:

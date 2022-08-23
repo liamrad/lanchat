@@ -3,6 +3,7 @@ import express from 'express'
 import http from 'node:http'
 import { Server } from 'socket.io'
 import rrpf from 'rrpf'
+import ip from 'ip'
 
 const app = express()
 const server = http.createServer(app)
@@ -26,7 +27,7 @@ io.on('connection', (socket) => {
 })
 
 let port = 3000
-server.listen(port, () => { console.log(`server is running on ${port}` )})
+server.listen(port, () => { console.log(`server is running on http://${ip.address()}:${port}` )})
 
 server.on('error', e => {
   if (e.code === 'EADDRINUSE') {
